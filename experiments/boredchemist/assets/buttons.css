@@ -1,0 +1,173 @@
+ .elemButton {
+    background-color: #3d94f6;
+    border-radius: 6px;
+    border: 1px solid #585858;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 0px 0px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+}
+
+.elemButton[disabled]{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.elemButton:hover {
+    background-color: #1e62d0;
+}
+
+.elemButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.elemButton .symbol {
+    padding:10px;
+    font-size:20px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.elemButton .quantity {
+    padding-right:5px;
+    text-align: right;
+    pointer-events: none;
+}
+
+.other-non-metals {
+    background-color:rgb(94, 0, 90);
+}
+.other-non-metals:hover {
+    background-color:#A500A0;
+}
+
+.noble-gases {
+    background-color: rgb(0, 68, 90);
+}
+
+.noble-gases:hover {
+    background-color: #007EA7;
+}
+
+.metalloids{
+    background-color:rgb(0, 83, 46);
+}
+.metalloids:hover{
+    background-color:#00A55B;
+}
+.post-trans-metals{
+    background-color: #4e3c00;
+}
+.post-trans-metals:hover{
+    background-color: #967300;
+}
+
+.trans-metals{
+    background-color:rgb(78, 92, 1);
+}
+.trans-metals:hover{
+    background-color:#8EA604;
+}
+.alk-earth-metals{
+    background-color:rgb(92, 41, 0);
+}
+.alk-earth-metals:hover{
+    background-color:#A54A00;
+}
+
+
+.alk-metals{
+    background-color:rgb(0, 46, 95);
+}
+.alk-metals:hover{
+    background-color:#0050A5;
+}
+
+.lanthanides{
+    background-color:rgb(119, 40, 25);
+
+}
+.lanthanides:hover{
+    background-color:#D1462F;
+}
+
+.actinoids{
+    background-color:rgb(0, 70, 94);
+}
+.actinoids:hover{
+    background-color:#007EA7;
+}
+
+.other-elements{
+    background-color:#001a25;
+}
+.other-elements:hover{
+    background-color:#003249;
+}
+
+.uiButton {
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+    background-color:#768d87;
+    border-radius:5px;
+    border:1px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
+    padding:5px 5px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+}
+.uiButton:hover {
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color:#6c7c7c;
+}
+.uiButton:active {
+    position:relative;
+    top:1px;
+}
+
+.uiButton.particle {
+    padding : 5px;
+    font-size:25px;
+}
+.uiButton[disabled]{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.substanceButton {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+	border:1px solid #337fed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bold;
+    text-decoration:none;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 3px;
+}
+.substanceButton:hover {
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+}
+.substanceButton:active {
+	position:relative;
+	top:1px;
+}
+.substanceButton[disabled]{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+

@@ -1,0 +1,273 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <script src="./build/boredchemist.js"></script>
+  <link href="assets/gridclasses.css" rel="stylesheet">
+  <link href="assets/buttons.css" rel="stylesheet">
+  <style>
+    body {
+      -webkit-user-select: none;
+      /* Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+/Edge */
+      user-select: none;
+      overflow: hidden;
+      font-family: 'Josefin Sans', Verdana, Tahoma, sans-serif;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ptable {
+      display: grid;
+    }
+
+    .ptable .element {
+      width: 40px;
+      height: 40px;
+      margin: 2px;
+    }
+
+    .item.clicker-panel {
+      grid-column-start: 6;
+      grid-column-end: 8;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item.particles-panel {
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      display: grid;
+      color: black;
+    }
+
+    .item.hiring-panel {
+      visibility: hidden;
+      background: white;
+      grid-column-start: 8;
+      grid-column-end: 13;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      display: grid;
+    }
+
+    .market-panel {
+      grid-column-start: 8;
+      grid-column-end: 13;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    .market-panel .cash {
+      font-size: 35px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 5px;
+    }
+
+    .element-shop-panel {
+      visibility: hidden;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgb(92, 92, 92) 0%, rgb(48, 48, 48) 100%);
+      grid-column-start: 8;
+      grid-column-end: 13;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      border: 1px solid rgb(255, 255, 255);
+      display: grid;
+      color: white;
+      z-index: 10;
+    }
+
+    .element-shop-panel .elem-name {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row: 1;
+      text-align: center;
+      padding-top: 1em;
+    }
+
+
+    .element-shop-panel .make-quantity {
+      border: 0px;
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .element-shop-panel .factory-rate {
+      border: 0px;
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .element-shop-panel .uiButton {
+      text-align: center;
+      width: 80px;
+      height: 30px;
+    }
+
+    .element-shop-panel .close {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 1;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 10px;
+      padding: 0px;
+    }
+
+
+    .element-shop-panel .elem-make {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .element-shop-panel .buy-elem-factory {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    .substance-shop-panel {
+      visibility: hidden;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgb(92, 92, 92) 0%, rgb(48, 48, 48) 100%);
+      z-index: 10;
+      grid-column-start: 7;
+      grid-column-end: 13;
+      grid-row-start: 5;
+      grid-row-end: 8;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border: 1px solid rgb(255, 255, 255);
+      display: grid;
+      color: white;
+      padding-top: 15px;
+    }
+
+    .substance-shop-panel .uiButton {
+      padding: 4px;
+      line-height: 20px;
+      height: 20px;
+      width: 120px;
+      margin: 4px;
+    }
+
+    .substance-shop-panel .uiButton.close {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 10px;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row: 1;
+      padding: 0px;
+    }
+
+    .substance-shop-panel * {
+      text-align: center;
+      padding: 2px;
+    }
+
+    .substance-shop-panel .sub-name {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 1;
+      font-weight: bold;
+      font-size: 20px;
+      padding-top: 5px;
+    }
+
+    .substance-shop-panel .sub-make {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row: 1;
+    }
+
+
+    .substance-shop-panel .label {
+      font-style: italic;
+    }
+
+    .substance-shop-panel .sub-quantity.label {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 2
+    }
+
+    .substance-shop-panel .sub-factory-count.label {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row: 2
+    }
+
+    .substance-shop-panel .sub-quantity.value {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 3
+    }
+
+    .substance-shop-panel .sub-factory-count.value {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row: 3
+    }
+
+    .substance-shop-panel .sub-tags {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row: 5;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .substance-shop-panel .sub-tag {
+      background: gray;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 3px;
+      font-style: italic;
+    }
+
+    .item.particles-panel .label {
+      padding: 5px;
+    }
+
+    .item.particles-panel .count {
+      padding: 5px;
+    }
+
+    .substance-panel {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+
+    .substance-item.producible {
+      background-color: rgb(29, 139, 212);
+    }
+
+    .substance-item.producible:hover {
+      background-color: rgb(0, 152, 253);
+      cursor: hand;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
